@@ -21,13 +21,13 @@ int main(void) {
     close(fd[1]);
     dup(fd[0]);
  
-//    int secretNumber;
-//    size_t readBytes = read(fd[0], &secretNumber, sizeof(secretNumber));
+    int secretNumber;
+    size_t readBytes = read(fd[0], &secretNumber, sizeof(secretNumber));
  
-//    printf("Waiting for PIN...\n");
-  //  wait(NULL);
-  //  printf("Bytes read: %ld\n", readBytes);
- //   printf("PIN: %d\n", secretNumber);
+    printf("Waiting for PIN...\n");
+    wait(NULL);
+    printf("Bytes read: %ld\n", readBytes);
+    printf("PIN: %d\n", secretNumber);
   }
   else if(pid == 0) {
     close(1);
