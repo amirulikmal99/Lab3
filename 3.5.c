@@ -38,7 +38,7 @@ int main(void)
 		read(pipefds[0], &buffer, sizeof(int));
 		close(pipefds[0]);
 
-		if(buffer >= 3) {
+		if(buffer <= 3) {
 			if(buffer == 1) {
 				printf("%d is not a prime number.\n", buffer);
 			}
@@ -48,7 +48,7 @@ int main(void)
 			exit(EXIT_SUCCESS);
 		}
 
-		if(buffer < 3) {
+		if(buffer > 3) {
 			for(int i = 2; i <= buffer/2; i++) {
 				if(buffer % i == 0) {
 					printf("%d is not a prime number.\n", buffer);
@@ -73,3 +73,4 @@ int main(void)
 void sigint_handler(int sig) {
 	printf("This is a special signal handler for SIGINT");
 }
+
