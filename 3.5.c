@@ -72,7 +72,7 @@ int main(void)
 
 void sigint_handler(int sig)
  {
-	printf("This is a special signal handler for SIGINT");
+	printf("This is a special signal handler for SIGINT \n");
 
  }
 
