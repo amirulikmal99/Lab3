@@ -61,7 +61,7 @@ int main(void)
 			}
 		}
 
-	//	printf("DONE!!!\n");
+		printf("DONE!!!\n");
 	}
 	else {
 		perror("ERROR");
