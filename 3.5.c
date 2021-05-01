@@ -61,7 +61,7 @@ int main(void)
 			}
 		}
 
-		printf("DONE!!!\n");
+	//	printf("DONE!!!\n");
 	}
 	else {
 		perror("ERROR");
@@ -70,7 +70,9 @@ int main(void)
 	return EXIT_SUCCESS;
 }
 
-void sigint_handler(int sig) {
+void sigint_handler(int sig)
+ {
 	printf("This is a special signal handler for SIGINT");
-}
+
+ }
 
